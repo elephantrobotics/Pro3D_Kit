@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RobotTool>
+  <Tool>
+    <CollisionDownSample>0.5</CollisionDownSample>
+    <name>sucker_pipe</name>
+    <parent>NULL</parent>
+    <file>sucker_pipe.obj</file>
+    <local_pose>0 0 0 0 0 0</local_pose>
+    <zero_pose>0 0 0 0 0 0</zero_pose>
+    <linear_axis>Z</linear_axis>
+    <init_linear_val>0</init_linear_val>
+    <show_axis>0</show_axis>
+    <tool_offset>0 0 0.19 0 0 0</tool_offset>
+  </Tool>
+</RobotTool>

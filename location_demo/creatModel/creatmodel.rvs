@@ -1,0 +1,2500 @@
+{
+  "Dashboard": {
+    "current_tab": 0,
+    "page_list": [
+      {
+        "background_color": "#121212",
+        "background_pixmap_path": "",
+        "background_pixmap_show_method": "repeat",
+        "disabled": false,
+        "min_height": 607,
+        "min_width": 500,
+        "page_name": "新页",
+        "widget_list": [
+          {
+            "auto_font": true,
+            "background_color": "#ff37474f",
+            "border_color": "#00ff00",
+            "border_visible": false,
+            "font_color": "#ffffff",
+            "font_size": 13,
+            "height": 40,
+            "para_list": [
+              {
+                "node_id": "MainGroup/Trigger",
+                "para": "trigger"
+              }
+            ],
+            "pos_x": 51,
+            "pos_y": 36,
+            "rounded_rect": false,
+            "text": "拍照触发",
+            "type": "rvsPushButton",
+            "width": 100
+          },
+          {
+            "auto_font": true,
+            "background_color": "#ff37474f",
+            "border_color": "#00ff00",
+            "border_visible": false,
+            "font_color": "#ffffff",
+            "font_size": 13,
+            "height": 40,
+            "para_list": [
+              {
+                "node_id": "MainGroup/Trigger_1",
+                "para": "trigger"
+              }
+            ],
+            "pos_x": 51,
+            "pos_y": 101,
+            "rounded_rect": false,
+            "text": "保存模型",
+            "type": "rvsPushButton",
+            "width": 100
+          },
+          {
+            "auto_font": true,
+            "background_color": "#ff37474f",
+            "border_color": "#00ff00",
+            "border_visible": false,
+            "font_color": "#ffffff",
+            "font_size": 13,
+            "height": 40,
+            "para_list": [
+              {
+                "node_id": "MainGroup/Trigger_0",
+                "para": "trigger"
+              }
+            ],
+            "pos_x": 51,
+            "pos_y": 160,
+            "rounded_rect": false,
+            "text": "查找物品",
+            "type": "rvsPushButton",
+            "width": 100
+          },
+          {
+            "auto_font": true,
+            "background_color": "#ff121212",
+            "border_color": "#00ff00",
+            "border_visible": false,
+            "font_color": "#ffffff",
+            "font_size": 10,
+            "height": 40,
+            "para_list": [
+              {
+                "node_id": "MainGroup/Emit",
+                "para": "cube_visibility"
+              }
+            ],
+            "pos_x": 181,
+            "pos_y": 36,
+            "rounded_rect": false,
+            "text": "model-show",
+            "type": "rvsCheckBox",
+            "width": 100
+          },
+          {
+            "auto_font": true,
+            "background_color": "#ff121212",
+            "border_color": "#00ff00",
+            "border_visible": false,
+            "font_color": "#ffffff",
+            "font_size": 10,
+            "height": 40,
+            "para_list": [
+              {
+                "node_id": "MainGroup/Emit_1",
+                "para": "cube_visibility"
+              }
+            ],
+            "pos_x": 181,
+            "pos_y": 160,
+            "rounded_rect": false,
+            "text": "match-show",
+            "type": "rvsCheckBox",
+            "width": 100
+          },
+          {
+            "auto_font": true,
+            "border_color": "#00ff00",
+            "border_visible": false,
+            "font_size": 11,
+            "height": 60,
+            "para_list": [
+              {
+                "node_id": "MainGroup/Percipio3DMatching",
+                "para": "model_filename"
+              }
+            ],
+            "pos_x": 51,
+            "pos_y": 207,
+            "type": "rvsLineEdit",
+            "width": 180
+          }
+        ]
+      }
+    ],
+    "tab_background_color": "#263238",
+    "tab_font_color": "#ffffff",
+    "tab_font_size": 9,
+    "tab_select_color": "#ffffc8"
+  },
+  "IsGroup": true,
+  "ParaSettings": [],
+  "angle_unit": "degree",
+  "edge_list": [
+    {
+      "from_index": 0,
+      "from_node": "Trigger",
+      "to_index": 0,
+      "to_node": "TyCameraAccess"
+    },
+    {
+      "from_index": 0,
+      "from_node": "Emit",
+      "to_index": 0,
+      "to_node": "CloudSegment"
+    },
+    {
+      "from_index": 0,
+      "from_node": "TyCameraAccess",
+      "to_index": 0,
+      "to_node": "Emit"
+    },
+    {
+      "from_index": 2,
+      "from_node": "Emit",
+      "to_index": 3,
+      "to_node": "CloudSegment"
+    },
+    {
+      "from_index": 2,
+      "from_node": "TyCameraAccess",
+      "to_index": 1,
+      "to_node": "CloudSegment"
+    },
+    {
+      "from_index": 2,
+      "from_node": "CloudSegment",
+      "to_index": 2,
+      "to_node": "Save"
+    },
+    {
+      "from_index": 0,
+      "from_node": "Trigger_1",
+      "to_index": 0,
+      "to_node": "Save"
+    },
+    {
+      "from_index": 0,
+      "from_node": "Trigger_0",
+      "to_index": 0,
+      "to_node": "Emit_1"
+    },
+    {
+      "from_index": 0,
+      "from_node": "Emit_1",
+      "to_index": 0,
+      "to_node": "CloudSegment_1"
+    },
+    {
+      "from_index": 2,
+      "from_node": "Emit_1",
+      "to_index": 3,
+      "to_node": "CloudSegment_1"
+    },
+    {
+      "from_index": 2,
+      "from_node": "TyCameraAccess",
+      "to_index": 1,
+      "to_node": "CloudSegment_1"
+    },
+    {
+      "from_index": 0,
+      "from_node": "CloudSegment_1",
+      "to_index": 0,
+      "to_node": "Percipio3DMatching"
+    },
+    {
+      "from_index": 2,
+      "from_node": "CloudSegment_1",
+      "to_index": 1,
+      "to_node": "Percipio3DMatching"
+    }
+  ],
+  "group_ports": {
+    "input": {
+      "offset": 1,
+      "ports": []
+    },
+    "output": {
+      "offset": 2,
+      "ports": []
+    }
+  },
+  "is_lock": false,
+  "length_unit": "millimeter",
+  "node_class": "GroupNode",
+  "node_list": [
+    {
+      "IsGroup": true,
+      "angle_unit": "degree",
+      "edge_list": [],
+      "group_ports": {
+        "input": {
+          "offset": 1,
+          "ports": []
+        },
+        "output": {
+          "offset": 2,
+          "ports": []
+        }
+      },
+      "is_lock": false,
+      "length_unit": "millimeter",
+      "node_class": "GroupNode",
+      "node_list": [
+        {
+          "IsGroup": false,
+          "angle_unit": "degree",
+          "length_unit": "millimeter",
+          "node_class": "TyCameraResource",
+          "node_name": "TyCameraResource",
+          "panel_config": "{\"207000146821\":[{\"paraName\":\"fill_hole\",\"paraType\":\"Bool\",\"paraValue\":false},{\"paraMax\":\"30\",\"paraMin\":\"1\",\"paraName\":\"k_size\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":10},{\"paraMax\":\"30000\",\"paraMin\":\"3\",\"paraName\":\"h_size\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":50},{\"paraName\":\"remove_outlier\",\"paraType\":\"Bool\",\"paraValue\":false},{\"paraMax\":\"3000\",\"paraMin\":\"10\",\"paraName\":\"spk_size\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":150},{\"paraName\":\"time_domain_filter\",\"paraType\":\"Bool\",\"paraValue\":false},{\"paraMax\":\"10\",\"paraMin\":\"2\",\"paraName\":\"time_domain_frame_count\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":3},{\"paraName\":\"median_filter\",\"paraType\":\"Bool\",\"paraValue\":false},{\"paraMax\":\"2\",\"paraMin\":\"1\",\"paraName\":\"median_size\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":1},{\"paraName\":\"laser_auto_ctrl\",\"paraType\":\"Bool\",\"paraValue\":true},{\"paraMax\":\"100\",\"paraMin\":\"0\",\"paraName\":\"laser_power\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":80},{\"paraMax\":\"8.000000\",\"paraMin\":\"0.012500\",\"paraName\":\"scale_unit\",\"paraType\":\"Double\",\"paraUnit\":\"\",\"paraValue\":0.25},{\"paraMax\":\"320\",\"paraMin\":\"1\",\"paraName\":\"sgbm_disparity_num\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":256},{\"paraMax\":\"1280\",\"paraMin\":\"-1280\",\"paraName\":\"sgbm_disparity_offset\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":-64},{\"paraMax\":\"21\",\"paraMin\":\"1\",\"paraName\":\"sgbm_match_win_height\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":5},{\"paraMax\":\"9\",\"paraMin\":\"1\",\"paraName\":\"sgbm_match_win_width\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":5},{\"paraMax\":\"20\",\"paraMin\":\"1\",\"paraName\":\"sgbm_image_num\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":18},{\"paraMax\":\"10000\",\"paraMin\":\"0\",\"paraName\":\"sgbm_semi_param_p1\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":100},{\"paraMax\":\"25\",\"paraMin\":\"0\",\"paraName\":\"sgbm_semi_param_p1_scale\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":6},{\"paraMax\":\"10000\",\"paraMin\":\"0\",\"paraName\":\"sgbm_semi_param_p2\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":400},{\"paraMax\":\"511\",\"paraMin\":\"0\",\"paraName\":\"sgbm_unique_factor\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":10},{\"paraMax\":\"10000\",\"paraMin\":\"0\",\"paraName\":\"sgbm_unique_absdiff\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":400},{\"paraName\":\"sgbm_hfilter_half_win\",\"paraType\":\"Bool\",\"paraValue\":true},{\"paraName\":\"sgbm_medfilter\",\"paraType\":\"Bool\",\"paraValue\":true},{\"paraMax\":\"511\",\"paraMin\":\"1\",\"paraName\":\"sgbm_medfilter_thresh\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":100},{\"paraName\":\"sgbm_lrc\",\"paraType\":\"Bool\",\"paraValue\":true},{\"paraMax\":\"4095\",\"paraMin\":\"1\",\"paraName\":\"sgbm_lrc_diff\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":8},{\"paraName\":\"rgb_auto_awb\",\"paraType\":\"Bool\",\"paraValue\":true},{\"paraName\":\"rgb_auto_exposure\",\"paraType\":\"Bool\",\"paraValue\":true},{\"paraMax\":\"65535\",\"paraMin\":\"1\",\"paraName\":\"rgb_analog_gain\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":416},{\"paraMax\":\"66600\",\"paraMin\":\"0\",\"paraName\":\"rgb_exposure_time\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":9987},{\"paraMax\":\"4000\",\"paraMin\":\"0\",\"paraName\":\"rgb_ae_target_v\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":3373},{\"paraName\":\"left_ir_hdr\",\"paraType\":\"Bool\",\"paraValue\":false},{\"paraMax\":\"255\",\"paraMin\":\"0\",\"paraName\":\"left_ir_gain\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":32},{\"paraMax\":\"3\",\"paraMin\":\"0\",\"paraName\":\"left_ir_analog_gain\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":1},{\"paraMax\":\"990\",\"paraMin\":\"3\",\"paraName\":\"left_ir_exposure_time\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":990},{\"paraName\":\"right_ir_hdr\",\"paraType\":\"Bool\",\"paraValue\":false},{\"paraMax\":\"255\",\"paraMin\":\"0\",\"paraName\":\"right_ir_gain\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":32},{\"paraMax\":\"3\",\"paraMin\":\"0\",\"paraName\":\"right_ir_analog_gain\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":1},{\"paraMax\":\"990\",\"paraMin\":\"3\",\"paraName\":\"right_ir_exposure_time\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":990},{\"paraMax\":\"10000\",\"paraMin\":\"0\",\"paraName\":\"packet_delay\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":100},{\"paraMax\":\"1500\",\"paraMin\":\"100\",\"paraName\":\"packet_size\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":1500},{\"paraMax\":\"1300000\",\"paraMin\":\"0\",\"paraName\":\"trigger_duration_us\",\"paraType\":\"Int\",\"paraUnit\":\"\",\"paraValue\":0}]}",
+          "parameters": [
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "hidden",
+              "paraMax": "MAX",
+              "paraMin": "MIN",
+              "paraName": "_node_pos_x",
+              "paraTag": "NULL",
+              "paraType": "Float",
+              "paraUnit": "",
+              "paraValue": "55.08130264"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "hidden",
+              "paraMax": "MAX",
+              "paraMin": "MIN",
+              "paraName": "_node_pos_y",
+              "paraTag": "NULL",
+              "paraType": "Float",
+              "paraUnit": "",
+              "paraValue": "68.30081177"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "auto_start",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "1"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "start",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "0"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "stop",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "0"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "reset",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "0"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "reselect_device",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "0"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "reconnect_device",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "1"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "camera_model",
+              "paraTag": "NULL",
+              "paraType": "String",
+              "paraUnit": "",
+              "paraValue": ""
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "camera_id",
+              "paraTag": "NULL",
+              "paraType": "String",
+              "paraUnit": "",
+              "paraValue": ""
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "selected_depth_mode",
+              "paraTag": "NULL",
+              "paraType": "Enum",
+              "paraUnit": "",
+              "paraValue": "DEPTH16_1280x960"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "selected_rgb_mode",
+              "paraTag": "NULL",
+              "paraType": "Enum",
+              "paraUnit": "",
+              "paraValue": "yuyv 2560x1920"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "output_color",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "1"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "output_depth",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "1"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "output_ir_left",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "0"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "output_ir_right",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "0"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "output_cloud",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "1"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "laser_auto_ctrl",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "1"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "100",
+              "paraMin": "0",
+              "paraName": "laser_power",
+              "paraTag": "NULL",
+              "paraType": "Int",
+              "paraUnit": "",
+              "paraValue": "100"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "rgb_isp",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "0"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "hdr_fusion",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "0"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "MAX",
+              "paraMin": "MIN",
+              "paraName": "cloud_scale",
+              "paraTag": "NULL",
+              "paraType": "Float",
+              "paraUnit": "",
+              "paraValue": "0.001000000047"
+            },
+            {
+              "enumNames": [
+                {
+                  "enum_name": "DEPTH_COORDINATE"
+                },
+                {
+                  "enum_name": "COLOR_COORDINATE"
+                }
+              ],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "cloud_coordinate",
+              "paraTag": "NULL",
+              "paraType": "Enum",
+              "paraUnit": "",
+              "paraValue": "DEPTH_COORDINATE"
+            },
+            {
+              "enumNames": [
+                {
+                  "enum_name": "TY_SOFTWARE_TRIGGER_MODE"
+                },
+                {
+                  "enum_name": "TY_HARDWARE_TRIGGER_MODE"
+                },
+                {
+                  "enum_name": "TY_TRIGGER_MODE_OFF"
+                }
+              ],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "trigger_mode",
+              "paraTag": "NULL",
+              "paraType": "Enum",
+              "paraUnit": "",
+              "paraValue": "TY_SOFTWARE_TRIGGER_MODE"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "depth_calib_file",
+              "paraTag": "Export Calib (*.txt)",
+              "paraType": "File",
+              "paraUnit": "",
+              "paraValue": ""
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "color_calib_file",
+              "paraTag": "Export Calib (*.txt)",
+              "paraType": "File",
+              "paraUnit": "",
+              "paraValue": ""
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "MAX",
+              "paraMin": "MIN",
+              "paraName": "extrinsic_pose_x",
+              "paraTag": "Pose",
+              "paraType": "Double",
+              "paraUnit": "Length",
+              "paraValue": "-0.02425466537"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "MAX",
+              "paraMin": "MIN",
+              "paraName": "extrinsic_pose_y",
+              "paraTag": "Pose",
+              "paraType": "Double",
+              "paraUnit": "Length",
+              "paraValue": "-0.0001107408777"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "MAX",
+              "paraMin": "MIN",
+              "paraName": "extrinsic_pose_z",
+              "paraTag": "Pose",
+              "paraType": "Double",
+              "paraUnit": "Length",
+              "paraValue": "0.0001949400157"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "6.283185",
+              "paraMin": "-6.283185",
+              "paraName": "extrinsic_pose_rx",
+              "paraTag": "Pose",
+              "paraType": "Double",
+              "paraUnit": "Angle",
+              "paraValue": "0.002288801363"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "6.283185",
+              "paraMin": "-6.283185",
+              "paraName": "extrinsic_pose_ry",
+              "paraTag": "Pose",
+              "paraType": "Double",
+              "paraUnit": "Angle",
+              "paraValue": "0.01039029658"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "",
+              "paraMax": "6.283185",
+              "paraMin": "-6.283185",
+              "paraName": "extrinsic_pose_rz",
+              "paraTag": "Pose",
+              "paraType": "Double",
+              "paraUnit": "Angle",
+              "paraValue": "0.0007209730102"
+            },
+            {
+              "enumNames": [],
+              "exposure": false,
+              "paraFlag": "String",
+              "paraMax": "",
+              "paraMin": "",
+              "paraName": "device_online_visibility",
+              "paraTag": "NULL",
+              "paraType": "Bool",
+              "paraUnit": "",
+              "paraValue": "1"
+            }
+          ]
+        }
+      ],
+      "node_name": "Resource",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "-600"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "_group_expand",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_expanded_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "-600"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_expanded_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_group_width",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "500"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_group_height",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "500"
+        }
+      ]
+    },
+    {
+      "IsGroup": false,
+      "angle_unit": "degree",
+      "length_unit": "millimeter",
+      "node_class": "TriggerNode",
+      "node_name": "Trigger",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "-638.1398315"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "691.3181763"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "Trigger"
+            },
+            {
+              "enum_name": "InitTrigger"
+            },
+            {
+              "enum_name": "DemultiplexerTrigger"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "type",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "Trigger"
+        },
+        {
+          "enumNames": [],
+          "exposure": true,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "trigger",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "activate",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "loop",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "counter",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "0"
+        }
+      ]
+    },
+    {
+      "IsGroup": false,
+      "angle_unit": "degree",
+      "length_unit": "millimeter",
+      "node_class": "TriggerNode",
+      "node_name": "Trigger_0",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "-215.0679321"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "1197.842163"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "Trigger"
+            },
+            {
+              "enum_name": "InitTrigger"
+            },
+            {
+              "enum_name": "DemultiplexerTrigger"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "type",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "Trigger"
+        },
+        {
+          "enumNames": [],
+          "exposure": true,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "trigger",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "activate",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "loop",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "counter",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "0"
+        }
+      ]
+    },
+    {
+      "IsGroup": false,
+      "angle_unit": "degree",
+      "length_unit": "millimeter",
+      "node_class": "TriggerNode",
+      "node_name": "Trigger_1",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "181.8418121"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "584.0515137"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "Trigger"
+            },
+            {
+              "enum_name": "InitTrigger"
+            },
+            {
+              "enum_name": "DemultiplexerTrigger"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "type",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "Trigger"
+        },
+        {
+          "enumNames": [],
+          "exposure": true,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "trigger",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "activate",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "loop",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "counter",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "0"
+        }
+      ]
+    },
+    {
+      "IsGroup": false,
+      "angle_unit": "degree",
+      "length_unit": "millimeter",
+      "node_class": "EmitNode",
+      "node_name": "Emit_1",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "26.79113197"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "1139.720581"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "NONE"
+            },
+            {
+              "enum_name": "Angle"
+            },
+            {
+              "enum_name": "CameraInfo"
+            },
+            {
+              "enum_name": "Cube"
+            },
+            {
+              "enum_name": "Cylinder"
+            },
+            {
+              "enum_name": "Line"
+            },
+            {
+              "enum_name": "Circle"
+            },
+            {
+              "enum_name": "Object"
+            },
+            {
+              "enum_name": "PolyData"
+            },
+            {
+              "enum_name": "Pose"
+            },
+            {
+              "enum_name": "Sphere"
+            },
+            {
+              "enum_name": "String"
+            },
+            {
+              "enum_name": "Text"
+            },
+            {
+              "enum_name": "ImagePoints"
+            },
+            {
+              "enum_name": "Matrix"
+            },
+            {
+              "enum_name": "Number"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "type",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "Cube"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "pose_x",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "-0.013421"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "pose_y",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "0.000133"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "pose_z",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "0.361542"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "6.283185",
+          "paraMin": "-6.283185",
+          "paraName": "pose_rx",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Angle",
+          "paraValue": "-0.008264"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "6.283185",
+          "paraMin": "-6.283185",
+          "paraName": "pose_ry",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Angle",
+          "paraValue": "-0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "6.283185",
+          "paraMin": "-6.283185",
+          "paraName": "pose_rz",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Angle",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "width",
+          "paraTag": "NULL",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "0.4"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "height",
+          "paraTag": "NULL",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "0.3"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "depth",
+          "paraTag": "NULL",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "0.1"
+        },
+        {
+          "enumNames": [],
+          "exposure": true,
+          "paraFlag": "Cube",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "cube_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": true,
+          "paraFlag": "Cube",
+          "paraMax": "360",
+          "paraMin": "-2",
+          "paraName": "cube_color",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "-2"
+        },
+        {
+          "enumNames": [],
+          "exposure": true,
+          "paraFlag": "Cube",
+          "paraMax": "1.0",
+          "paraMin": "0.0",
+          "paraName": "cube_opacity",
+          "paraTag": "NULL",
+          "paraType": "Double",
+          "paraUnit": "",
+          "paraValue": "0.5"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "Pose",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "pose_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "Pose",
+          "paraMax": "10",
+          "paraMin": "0.001",
+          "paraName": "pose_scale",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0.1000000015"
+        }
+      ]
+    },
+    {
+      "IsGroup": false,
+      "angle_unit": "degree",
+      "length_unit": "millimeter",
+      "node_class": "TyCameraAccessNode",
+      "node_name": "TyCameraAccess",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "-383.6269531"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "717.9073486"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "TyCameraResource"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "camera_resource",
+          "paraTag": "TyCameraResource",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "TyCameraResource"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "save_frame",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "cloud_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "360",
+          "paraMin": "-2",
+          "paraName": "cloud_color",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "-2"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "50.0",
+          "paraMin": "1.0",
+          "paraName": "cloud_point_size",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "color_image_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "depth_image_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "ir_l_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "ir_r_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        }
+      ]
+    },
+    {
+      "IsGroup": false,
+      "angle_unit": "degree",
+      "length_unit": "millimeter",
+      "node_class": "CloudSegmentNode",
+      "node_name": "CloudSegment_1",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "220.2941284"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "1168.374634"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "CropboxSegment"
+            },
+            {
+              "enum_name": "PlaneSegment"
+            },
+            {
+              "enum_name": "PassThroughSegment"
+            },
+            {
+              "enum_name": "PointAxisSegment"
+            },
+            {
+              "enum_name": "DiffSegment"
+            },
+            {
+              "enum_name": "NNPDSegment"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "type",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "CropboxSegment"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "intersection"
+            },
+            {
+              "enum_name": "individual"
+            },
+            {
+              "enum_name": "outside_points"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "mode",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "intersection"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "cloud_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "360",
+          "paraMin": "-2",
+          "paraName": "cloud_color",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "-1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "50.0",
+          "paraMin": "1.0",
+          "paraName": "cloud_point_size",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "cloud_list_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "360",
+          "paraMin": "-2",
+          "paraName": "cloud_list_color",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "-1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "50.0",
+          "paraMin": "1.0",
+          "paraName": "cloud_list_point_size",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "1"
+        }
+      ]
+    },
+    {
+      "IsGroup": false,
+      "angle_unit": "degree",
+      "length_unit": "millimeter",
+      "node_class": "EmitNode",
+      "node_name": "Emit",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "-112.7651825"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "796.7423706"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "NONE"
+            },
+            {
+              "enum_name": "Angle"
+            },
+            {
+              "enum_name": "CameraInfo"
+            },
+            {
+              "enum_name": "Cube"
+            },
+            {
+              "enum_name": "Cylinder"
+            },
+            {
+              "enum_name": "Line"
+            },
+            {
+              "enum_name": "Circle"
+            },
+            {
+              "enum_name": "Object"
+            },
+            {
+              "enum_name": "PolyData"
+            },
+            {
+              "enum_name": "Pose"
+            },
+            {
+              "enum_name": "Sphere"
+            },
+            {
+              "enum_name": "String"
+            },
+            {
+              "enum_name": "Text"
+            },
+            {
+              "enum_name": "ImagePoints"
+            },
+            {
+              "enum_name": "Matrix"
+            },
+            {
+              "enum_name": "Number"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "type",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "Cube"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "pose_x",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "-0.034279"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "pose_y",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "0.018915"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "pose_z",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "0.363943"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "6.283185",
+          "paraMin": "-6.283185",
+          "paraName": "pose_rx",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Angle",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "6.283185",
+          "paraMin": "-6.283185",
+          "paraName": "pose_ry",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Angle",
+          "paraValue": "-0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "6.283185",
+          "paraMin": "-6.283185",
+          "paraName": "pose_rz",
+          "paraTag": "Pose",
+          "paraType": "Double",
+          "paraUnit": "Angle",
+          "paraValue": "1.699929"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "width",
+          "paraTag": "NULL",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "0.13"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "height",
+          "paraTag": "NULL",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "0.1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "depth",
+          "paraTag": "NULL",
+          "paraType": "Double",
+          "paraUnit": "Length",
+          "paraValue": "0.1"
+        },
+        {
+          "enumNames": [],
+          "exposure": true,
+          "paraFlag": "Cube",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "cube_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": true,
+          "paraFlag": "Cube",
+          "paraMax": "360",
+          "paraMin": "-2",
+          "paraName": "cube_color",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "-2"
+        },
+        {
+          "enumNames": [],
+          "exposure": true,
+          "paraFlag": "Cube",
+          "paraMax": "1.0",
+          "paraMin": "0.0",
+          "paraName": "cube_opacity",
+          "paraTag": "NULL",
+          "paraType": "Double",
+          "paraUnit": "",
+          "paraValue": "0.5"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "Pose",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "pose_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "Pose",
+          "paraMax": "10",
+          "paraMin": "0.001",
+          "paraName": "pose_scale",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0.1000000015"
+        }
+      ]
+    },
+    {
+      "IsGroup": false,
+      "angle_unit": "degree",
+      "length_unit": "millimeter",
+      "node_class": "CloudSegmentNode",
+      "node_name": "CloudSegment",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "78.30082703"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "822.1239014"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "CropboxSegment"
+            },
+            {
+              "enum_name": "PlaneSegment"
+            },
+            {
+              "enum_name": "PassThroughSegment"
+            },
+            {
+              "enum_name": "PointAxisSegment"
+            },
+            {
+              "enum_name": "DiffSegment"
+            },
+            {
+              "enum_name": "NNPDSegment"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "type",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "CropboxSegment"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "intersection"
+            },
+            {
+              "enum_name": "individual"
+            },
+            {
+              "enum_name": "outside_points"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "mode",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "intersection"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "cloud_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "360",
+          "paraMin": "-2",
+          "paraName": "cloud_color",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "-1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "50.0",
+          "paraMin": "1.0",
+          "paraName": "cloud_point_size",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "cloud_list_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "360",
+          "paraMin": "-2",
+          "paraName": "cloud_list_color",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "-1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "50.0",
+          "paraMin": "1.0",
+          "paraName": "cloud_list_point_size",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "1"
+        }
+      ]
+    },
+    {
+      "IsGroup": false,
+      "angle_unit": "degree",
+      "length_unit": "millimeter",
+      "node_class": "Percipio3DMatchingNode",
+      "node_name": "Percipio3DMatching",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "440.4347534"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "1189.419434"
+        },
+        {
+          "enumNames": [],
+          "exposure": true,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "model_filename",
+          "paraTag": "PointCloud (*.pcd *.ply *.xyz *.txt, *.csv)",
+          "paraType": "File",
+          "paraUnit": "",
+          "paraValue": "location_demo/creatModel/gripper.pcd"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "estimate_normal",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "0"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "50",
+          "paraMin": "0",
+          "paraName": "targetCount",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "modelRelSamplingDistance",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0.02999999933"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "sceneRelSamplingDistance",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0.05000000075"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "maxOverlapFraction",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0.200000003"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "keyPointFraction",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0.200000003"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "icpRelSamplingDistance",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0.01499999966"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "icpRelRMSEThresh",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0.01499999966"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "pointToPlane",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "MAX",
+          "paraMin": "0",
+          "paraName": "fitnessThresh",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0.5"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "Pose",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "pose_list_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "Pose",
+          "paraMax": "10",
+          "paraMin": "0.001",
+          "paraName": "pose_list_scale",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "0.1000000015"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "cloud_list_visibility",
+          "paraTag": "NULL",
+          "paraType": "Bool",
+          "paraUnit": "",
+          "paraValue": "1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "360",
+          "paraMin": "-2",
+          "paraName": "cloud_list_color",
+          "paraTag": "NULL",
+          "paraType": "Int",
+          "paraUnit": "",
+          "paraValue": "-1"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "PointCloud",
+          "paraMax": "50.0",
+          "paraMin": "1.0",
+          "paraName": "cloud_list_point_size",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "1"
+        }
+      ]
+    },
+    {
+      "IsGroup": false,
+      "angle_unit": "degree",
+      "length_unit": "millimeter",
+      "node_class": "SaveNode",
+      "node_name": "Save",
+      "panel_config": "",
+      "parameters": [
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_x",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "517.5285034"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "hidden",
+          "paraMax": "MAX",
+          "paraMin": "MIN",
+          "paraName": "_node_pos_y",
+          "paraTag": "NULL",
+          "paraType": "Float",
+          "paraUnit": "",
+          "paraValue": "778.3140259"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "NONE"
+            },
+            {
+              "enum_name": "Cube"
+            },
+            {
+              "enum_name": "Image"
+            },
+            {
+              "enum_name": "ImagePoints"
+            },
+            {
+              "enum_name": "JointArray"
+            },
+            {
+              "enum_name": "Path"
+            },
+            {
+              "enum_name": "PointCloud"
+            },
+            {
+              "enum_name": "PolyData"
+            },
+            {
+              "enum_name": "Pose"
+            },
+            {
+              "enum_name": "String"
+            },
+            {
+              "enum_name": "Matrix"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "update",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "type",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "PointCloud"
+        },
+        {
+          "enumNames": [
+            {
+              "enum_name": "binary"
+            },
+            {
+              "enum_name": "ascii"
+            }
+          ],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "format",
+          "paraTag": "NULL",
+          "paraType": "Enum",
+          "paraUnit": "",
+          "paraValue": "binary"
+        },
+        {
+          "enumNames": [],
+          "exposure": false,
+          "paraFlag": "",
+          "paraMax": "",
+          "paraMin": "",
+          "paraName": "filename",
+          "paraTag": "PointCloud (*.pcd *ply *.xyz)",
+          "paraType": "File",
+          "paraUnit": "",
+          "paraValue": "location_demo/creatModel/model.pcd"
+        }
+      ]
+    }
+  ],
+  "node_name": "MainGroup",
+  "panel_config": "",
+  "parameters": [
+    {
+      "enumNames": [],
+      "exposure": false,
+      "paraFlag": "hidden",
+      "paraMax": "MAX",
+      "paraMin": "MIN",
+      "paraName": "_node_pos_x",
+      "paraTag": "NULL",
+      "paraType": "Float",
+      "paraUnit": "",
+      "paraValue": "0"
+    },
+    {
+      "enumNames": [],
+      "exposure": false,
+      "paraFlag": "hidden",
+      "paraMax": "MAX",
+      "paraMin": "MIN",
+      "paraName": "_node_pos_y",
+      "paraTag": "NULL",
+      "paraType": "Float",
+      "paraUnit": "",
+      "paraValue": "0"
+    },
+    {
+      "enumNames": [],
+      "exposure": false,
+      "paraFlag": "hidden",
+      "paraMax": "",
+      "paraMin": "",
+      "paraName": "_group_expand",
+      "paraTag": "NULL",
+      "paraType": "Bool",
+      "paraUnit": "",
+      "paraValue": "1"
+    },
+    {
+      "enumNames": [],
+      "exposure": false,
+      "paraFlag": "hidden",
+      "paraMax": "MAX",
+      "paraMin": "MIN",
+      "paraName": "_expanded_pos_x",
+      "paraTag": "NULL",
+      "paraType": "Float",
+      "paraUnit": "",
+      "paraValue": "0"
+    },
+    {
+      "enumNames": [],
+      "exposure": false,
+      "paraFlag": "hidden",
+      "paraMax": "MAX",
+      "paraMin": "MIN",
+      "paraName": "_expanded_pos_y",
+      "paraTag": "NULL",
+      "paraType": "Float",
+      "paraUnit": "",
+      "paraValue": "0"
+    },
+    {
+      "enumNames": [],
+      "exposure": false,
+      "paraFlag": "hidden",
+      "paraMax": "MAX",
+      "paraMin": "MIN",
+      "paraName": "_group_width",
+      "paraTag": "NULL",
+      "paraType": "Float",
+      "paraUnit": "",
+      "paraValue": "500"
+    },
+    {
+      "enumNames": [],
+      "exposure": false,
+      "paraFlag": "hidden",
+      "paraMax": "MAX",
+      "paraMin": "MIN",
+      "paraName": "_group_height",
+      "paraTag": "NULL",
+      "paraType": "Float",
+      "paraUnit": "",
+      "paraValue": "500"
+    }
+  ]
+}

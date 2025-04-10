@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="AUBO-i5" xmlns:xacro="http://ros.org/wiki/xacro">
+    <link name="base_link">
+        <collision>
+            <geometry>
+                <mesh filename="file:///rvs/projects/runtime/data/AUBO-i5/J0.obj"/>
+            </geometry>
+            <origin rpy="0 3.14159 3.14159" xyz="-0 -0 -0.0015"/>
+        </collision>
+    </link>
+    <joint name="Joint1" type="revolute">
+        <parent link="base_link"/>
+        <child link="Link1"/>
+        <origin rpy="0 -0 0" xyz="0 0 0.0985"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="150.0" lower="-6.28319" upper="6.28319" velocity="3.15"/>
+    </joint>
+    <link name="Link1">
+        <collision>
+            <geometry>
+                <mesh filename="file:///rvs/projects/runtime/data/AUBO-i5/J1.obj"/>
+            </geometry>
+            <origin rpy="0 3.14159 3.14159" xyz="-0 -0 -0.1"/>
+        </collision>
+    </link>
+    <joint name="Joint2" type="revolute">
+        <parent link="Link1"/>
+        <child link="Link2"/>
+        <origin rpy="0 -0 0" xyz="0 -0.1405 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit effort="150.0" lower="-6.28319" upper="6.28319" velocity="3.15"/>
+    </joint>
+    <link name="Link2">
+        <collision>
+            <geometry>
+                <mesh filename="file:///rvs/projects/runtime/data/AUBO-i5/J2.obj"/>
+            </geometry>
+            <origin rpy="0 3.14159 3.14159" xyz="4.83694e-22 0.1405 -0.1"/>
+        </collision>
+    </link>
+    <joint name="Joint3" type="revolute">
+        <parent link="Link2"/>
+        <child link="Link3"/>
+        <origin rpy="0 -0 0" xyz="0 0 0.408"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="150.0" lower="-6.28319" upper="6.28319" velocity="3.15"/>
+    </joint>
+    <link name="Link3">
+        <collision>
+            <geometry>
+                <mesh filename="file:///rvs/projects/runtime/data/AUBO-i5/J3.obj"/>
+            </geometry>
+            <origin rpy="0 3.14159 3.14159" xyz="-7.10543e-15 0.1405 -0.508"/>
+        </collision>
+    </link>
+    <joint name="Joint4" type="revolute">
+        <parent link="Link3"/>
+        <child link="Link4"/>
+        <origin rpy="0 -0 0" xyz="0 0.1215 0.376"/>
+        <axis xyz="0 -1 0"/>
+        <limit effort="150.0" lower="-6.28319" upper="6.28319" velocity="3.15"/>
+    </joint>
+    <link name="Link4">
+        <collision>
+            <geometry>
+                <mesh filename="file:///rvs/projects/runtime/data/AUBO-i5/J4.obj"/>
+            </geometry>
+            <origin rpy="0 3.14159 3.14159" xyz="3.55271e-15 0.019 -0.884"/>
+        </collision>
+    </link>
+    <joint name="Joint5" type="revolute">
+        <parent link="Link4"/>
+        <child link="Link5"/>
+        <origin rpy="0 -0 0" xyz="0 -0.1025 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="150.0" lower="-6.28319" upper="6.28319" velocity="3.15"/>
+    </joint>
+    <link name="Link5">
+        <collision>
+            <geometry>
+                <mesh filename="file:///rvs/projects/runtime/data/AUBO-i5/J5.obj"/>
+            </geometry>
+            <origin rpy="0 3.14159 3.14159" xyz="3.55271e-15 0.1215 -0.884"/>
+        </collision>
+    </link>
+    <joint name="Joint6" type="revolute">
+        <parent link="Link5"/>
+        <child link="Link6"/>
+        <origin rpy="1.5708 -0 0" xyz="0 -0.094 0.1025"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="150.0" lower="-6.28319" upper="6.28319" velocity="3.15"/>
+    </joint>
+    <link name="Link6">
+        <collision>
+            <geometry>
+                <mesh filename="file:///rvs/projects/runtime/data/AUBO-i5/J6.obj"/>
+            </geometry>
+            <origin rpy="-1.5708 -3.14159 3.14159" xyz="-0 -0.986501 -0.215496"/>
+        </collision>
+    </link>
+    <link name="ee_link">
+        <collision>
+            <geometry>
+                <mesh filename="file:///rvs/projects/runtime/"/>
+            </geometry>
+            <origin rpy="0 -0 -0" xyz="-0 0 -0"/>
+        </collision>
+    </link>
+    <joint name="ee_fixed_joint" type="fixed">
+        <parent link="Link6"/>
+        <child link="ee_link"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </joint>
+    <link name="world"/>
+    <link name="base"/>
+    <joint name="world_joint" type="fixed">
+        <parent link="world"/>
+        <child link="base_link"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </joint>
+    <joint name="base_link-base_fixed_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base"/>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </joint>
+</robot>
