@@ -31,6 +31,7 @@ def disconnect (sock):
         sock=None
 
 def get_send_TCP(sock_rvs):
+    
     result =erobot.get_coords()
     robot_TCP = result.copy()
     print("***get tcp***%s"%time.asctime())
@@ -44,13 +45,54 @@ def get_send_TCP(sock_rvs):
     print(sendStr) 
     sock_rvs.send(bytes(sendStr,encoding="utf-8"))
     print("***tcp_receive data***%s"%time.asctime())
+    read_time=time.time()
     data=sock_rvs.recv(socket_buf_len)
     print(data)
-    data_arr = data.split()
-    pose_real = [0, 0, 0, 0, 0, 0]          
+    print("read_time=",time.time()-read_time)
+
+    data_arr = data.decode().split(",")
+    print("data_arr =",data_arr )
+    if data_arr[1]=="false":
+        exit()
+        print("未识别到工件")
+    pose_offet = [0, 0, 0, 0, 0, 0] 
+    pose_real = [0, 0, 0, 0, 0, 0] 
+
+    tmp1=data_arr[0].split()
+    tmp2=data_arr[2].split()
+
+
+    
     for j in range(0,6):
-        pose_real[j] = float(data_arr[j])
-    return pose_real,data_arr[-1].decode()
+        pose_offet[j] = float(tmp1[j])
+        pose_real[j] = float(tmp2[j])
+    
+    # print("before", pose_real)
+
+    
+    # # print("before", pose_real)
+
+    # if pose_real[5] - result[5] > 90:
+    #     # pose_offet[5]
+    #     pose_real[3] *= -1
+    #     pose_real[4] *= -1
+    #     pose_real[5] -= 180
+    # if pose_real[5] - result[5] < -90:
+    #     pose_real[3] *= -1
+    #     pose_real[4] *= -1
+    #     pose_real[5] += 180
+
+    # pose_offet[3]=pose_real[3]
+    # pose_offet[4]=pose_real[4]
+    # pose_offet[5]=pose_real[5]
+
+    # print("after", pose_real)
+
+    print("pose_offet=",pose_offet)
+    print("pose_real=",pose_real)
+    # exit()
+
+    return [pose_offet,pose_real],data_arr[1]
 
 
 def wait_done():
@@ -60,14 +102,13 @@ def wait_done():
         time.sleep(6)
 
 
-# photo_point = [-10.01, -112.825, 104.148, -82.116, -89.213, -28.698]
-
-
-photo_point = [-14.634, -113.399, 104.467, -81.796, -89.152, -40.853]
+photo_point = [-10.01, -112.825, 104.148, -82.116, -89.213, -28.698]
 a=[41.106, -82.693, 114.778, -123.192, -90.124, 22.411]
 b=[55.486, -55.102, 76.027, -111.967, -90.395, 36.775]
-c=[41.042, -37.662, 48.943, -96.857, -89.985, 22.758]
+c=[37.356, -31.283, 32.527, -86.828, -90.269, 19.083]
 d=[25.567, -57.895, 80.522, -113.726, -89.821, 6.878]
+
+target_name=["tee","elbow","ball_valve","through"]
 
 if __name__ == "__main__":
     
@@ -86,58 +127,87 @@ if __name__ == "__main__":
         erobot.start_robot()
     try:
         while 1:
+            start_time=time.time()
             exec_index = exec_index +1
             print("第 %d 次拍照" %exec_index)
 
             
             print("移动到1号拍照位")
             erobot.write_angles(photo_point, robot_speed)
-            print("112")
+            
             wait_done()
-            time.sleep(3)
-            print("12")
+            # time.sleep()
+            
+            
             pose,id=get_send_TCP(sock_rvs)
-            print("133")
+            
             if id=="false":
                 break
-            for i in range(3,6):
-                pose[i]=reference_pose[i]
+            # for i in range(3,6):
+            #     pose[i]=reference_pose[i]
             
                 
-            pose[2]+=160
-            erobot.write_coords(pose,1999)
-            wait_done()
-            erobot.set_digital_out(0,1)
-            time.sleep(2)
+            # pose[2]+=50
+            if pose[0][3]>0 and pose[0][3]<90:
+                print("no")
 
-            pose[2]-=45
-            erobot.write_coords(pose,1999)
-            wait_done()
+            elif pose[0][3]<0 and pose[0][3]>-90:
+                # continue
+                print("no")
+             
+            else:
+                erobot.command_wait_done()
+                time.sleep(1)
+                erobot.write_coords(pose[0],robot_speed)
+                erobot.command_wait_done()
+                time.sleep(1)
+                # erobot.set_digital_out(0,1)
+                # time.sleep(2)
                 
+                # pose[2]-=50
+                erobot.write_coords(pose[1],robot_speed)
+                erobot.command_wait_done()
+                time.sleep(1)
+                erobot.set_digital_out(0,1)
+                time.sleep(2)
                 
-            pose[2]+=40
-            erobot.write_coords(pose,1999)
-            wait_done()
+                erobot.write_coords(pose[0],robot_speed)
+                erobot.command_wait_done()
+                time.sleep(1)
+                  
+                
+                erobot.write_angles(photo_point,robot_speed)
+                erobot.command_wait_done()
+                time.sleep(1)
 
-            erobot.write_angles(photo_point, robot_speed)
-            wait_done()
-            if id=="tee":
-                erobot.write_angles(a,robot_speed)
+                # erobot.write_angles([42.989, -37.041, 42.808, -96.697, -89.379, -1.542],robot_speed)
+                # wait_done()
+                if id==target_name[0]:
+                    erobot.write_angles(a,robot_speed)
+                    wait_done()
+                elif id==target_name[1]:
+                    erobot.write_angles(b,robot_speed)
+                    wait_done()
+                elif id==target_name[2]:
+                    erobot.write_angles(c,robot_speed)
+                    wait_done()
+                elif id==target_name[3]:
+                    erobot.write_angles(d,robot_speed)
+                    wait_done()
+                
+                erobot.set_digital_out(0,0)
+                time.sleep(2)
+
+                erobot.write_angles(photo_point,robot_speed)
                 wait_done()
-            elif id=="elbow":
-                erobot.write_angles(b,robot_speed)
-                wait_done()
-            elif id=="ball_valve":
-                erobot.write_angles(c,robot_speed)
-                wait_done()
-            elif id=="through":
-                erobot.write_angles(d,robot_speed)
-                wait_done()
-            
-            erobot.set_digital_out(0,0)
-            time.sleep(2)
-    except:
+
+                end_time=time.time()
+                print("time=",end_time-start_time)
+            # input("12332r43r4r")
+    except KeyboardInterrupt:
+        erobot.set_digital_out(0,0)
         erobot.stop_client()
+        
         print("end")
                 
 
