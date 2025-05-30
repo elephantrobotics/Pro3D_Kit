@@ -1,6 +1,6 @@
 from pymycobot import ElephantRobot
 import time
-robot_ip="192.168.6.79"
+robot_ip="192.168.1.159"
 er=ElephantRobot(robot_ip,5001)
 er.start_client()
 
