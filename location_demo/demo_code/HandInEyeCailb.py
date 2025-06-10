@@ -133,6 +133,8 @@ if __name__ == "__main__":
 
     if  erobot.state_check()==False:
         erobot.start_robot()
+        time.sleep(2)
+        erobot._state_on()
 
     while exec_index <len(point):
         exec_index = exec_index +1
