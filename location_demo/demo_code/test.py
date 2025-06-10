@@ -6,6 +6,8 @@ er.start_client()
 
 if er.state_check()==False:
     er.start_robot()
+    time.sleep(2)
+    erobot._state_on()
     
 
 er.write_angles([0,-90,0,-90,0,0],1500)
